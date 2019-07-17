@@ -1,0 +1,2367 @@
+09:48:10.471 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+09:48:11.452 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:48:12.339 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:48:12.740 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 396.83
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 4
+1 < Content-Type: text/xml
+1 < Date: Tue, 16 Jul 2019 07:48:12 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Deny
+
+09:48:12.740 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Deny
+09:48:12.771 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: pep.feature
+09:51:19.468 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+09:51:20.432 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:51:21.188 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:51:21.519 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 337.46
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 4
+1 < Content-Type: text/xml
+1 < Date: Tue, 16 Jul 2019 07:51:21 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Deny
+
+09:51:21.519 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Deny
+09:51:21.541 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: pep.feature
+09:53:56.485 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+09:53:57.428 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:53:58.199 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:53:58.546 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 341.06
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 4
+1 < Content-Type: text/xml
+1 < Date: Tue, 16 Jul 2019 07:53:58 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Deny
+
+09:53:58.546 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Deny
+09:53:58.568 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: pep.feature
+10:00:47.550 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+10:00:48.522 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+10:00:49.471 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+10:00:49.925 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 439.01
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 6
+1 < Content-Type: text/xml
+1 < Date: Tue, 16 Jul 2019 08:00:49 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Permit
+
+10:00:49.925 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Permit
+10:00:49.925 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - assertion failed: path: /Response/Result/Decision, actual: 'Permit', expected: 'Deny', reason: not equal
+10:00:49.972 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: pep.feature
+10:11:43.968 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+10:11:44.849 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+10:11:45.635 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+10:11:45.958 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target, http call failed after 323 milliseconds for URL: https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+10:11:45.958 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - http request failed: 
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+10:11:45.974 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: pep.feature
+08:50:15.210 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+08:50:20.322 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+08:50:25.202 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+08:50:26.736 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target, http call failed after 1534 milliseconds for URL: https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+08:50:26.736 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - http request failed: 
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+08:50:26.805 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: pep.feature
+08:51:40.755 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+08:51:41.938 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+08:51:42.887 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+08:51:43.157 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 261.29
+1 < 503
+1 < Connection: keep-alive
+1 < Content-Length: 197
+1 < Content-Type: text/html
+1 < Date: Wed, 17 Jul 2019 06:51:43 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+<html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx/1.15.5</center>
+</body>
+</html>
+
+
+08:51:43.273 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 3; The element type "hr" must be terminated by the matching end-tag "</hr>".
+08:51:43.273 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - status code was: 503, expected: 200, response time: 261, url: https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4, response: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx/1.15.5</center>
+</body>
+</html>
+
+08:51:43.288 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: pep.feature
+08:52:50.437 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+08:52:51.340 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+08:52:52.195 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+08:52:52.412 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 207.27
+1 < 503
+1 < Connection: keep-alive
+1 < Content-Length: 197
+1 < Content-Type: text/html
+1 < Date: Wed, 17 Jul 2019 06:52:52 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+<html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx/1.15.5</center>
+</body>
+</html>
+
+
+08:52:52.428 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 3; The element type "hr" must be terminated by the matching end-tag "</hr>".
+08:52:52.443 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - status code was: 503, expected: 200, response time: 207, url: https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4, response: <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+<hr><center>nginx/1.15.5</center>
+</body>
+</html>
+
+08:52:52.459 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: pep.feature
+09:31:42.949 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+09:31:43.821 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:31:44.576 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:31:45.024 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 445.65
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 6
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:31:45 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Permit
+
+09:31:45.024 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Permit
+09:31:45.062 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:31:45.093 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: deny
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:31:45.325 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 227.06
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 4
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:31:45 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Deny
+
+09:31:45.325 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Deny
+09:31:45.325 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - assertion failed: path: /Response/Result/Decision, actual: 'Deny', expected: 'deny', reason: not equal
+09:31:45.347 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: pep.feature
+09:32:12.292 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+09:32:13.210 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:32:14.058 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:32:14.428 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 363.39
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 6
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:32:14 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Permit
+
+09:32:14.428 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Permit
+09:32:14.443 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:32:14.475 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: deny
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:32:14.697 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 232.20
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 4
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:32:14 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Deny
+
+09:32:14.713 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Deny
+09:32:14.728 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: pep.feature
+09:43:01.096 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+09:43:02.098 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:43:03.225 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:43:03.596 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 370.28
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 6
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:43:03 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Permit
+
+09:43:03.596 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Permit
+09:43:03.612 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:43:03.634 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: deny
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:43:03.913 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 284.76
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 4
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:43:03 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Deny
+
+09:43:03.928 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Deny
+09:43:03.950 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: pep.feature
+09:48:33.693 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+09:48:34.817 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:48:35.884 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:48:36.401 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 517.79
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 6
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:48:36 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Permit
+
+09:48:36.401 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Permit
+09:48:36.416 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:48:36.448 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: deny
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:48:36.717 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 268.85
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 4
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:48:36 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Deny
+
+09:48:36.717 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Deny
+09:48:36.733 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: pep.feature
+09:50:02.347 [main] INFO  com.intuit.karate.Main - Karate version: 0.9.3
+09:50:03.280 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:50:04.051 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: permit
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:50:04.398 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 335.62
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 6
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:50:04 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Permit
+
+09:50:04.398 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Permit
+09:50:04.414 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Get env property from Runner class karate.env system property was: dev 
+09:50:04.429 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za/azp-ms-policy-enforcement-point-1.0.10-RELEASE/api/pep/PartyService/v4
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: bearer 1.2.3
+1 > Connection: Keep-Alive
+1 > Content-Length: 6308
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: azp-ms-pep-1-0-10.service.test.dfl.nednet.co.za
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+1 > X-obligation-id: 1.2.3
+1 > X-payloadType: deny
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ent="http://contracts.it.nednet.co.za/Infrastructure/2008/09/EnterpriseContext" xmlns:v4="http://contracts.it.nednet.co.za/services/ent/profilemanagement/Party/v4" xmlns:v41="http://contracts.it.nednet.co.za/data/ent/Party/v4">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1">
+            <wsse:Username>cc616275</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <ent:EnterpriseContext>
+         <ent:ContextInfo>
+            <ent:ProcessContextId>12356</ent:ProcessContextId>
+            <ent:ExecutionContextId>45982</ent:ExecutionContextId>
+         </ent:ContextInfo>
+         <ent:RequestOriginator>
+            <ent:MachineIPAddress>127.0.0.1</ent:MachineIPAddress>
+            <ent:UserPrincipleName>NEDCOR\CC609537</ent:UserPrincipleName>
+            <ent:MachineDNSName>testing</ent:MachineDNSName>
+            <ent:ChannelId>328</ent:ChannelId>
+         </ent:RequestOriginator>
+         <ent:InstrumentationInfo>
+            <ent:ParentInstrumentationId>1235648</ent:ParentInstrumentationId>
+            <ent:ChildInstrumentationId>135864</ent:ChildInstrumentationId>
+         </ent:InstrumentationInfo>
+      </ent:EnterpriseContext>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v4:MaintainPersonDetailReq xmlns:nsParty1="http://contracts.it.nednet.co.za/messages/clientsandpartners/profilemanagement/Party/v1">
+         <v41:RequestControl>
+            <v41:requestID>567890</v41:requestID>
+            <v41:DWLControl>
+               <v41:requesterName>TEST</v41:requesterName>
+               <v41:requesterLanguage>100</v41:requesterLanguage>
+               <v41:requestOrigin>338</v41:requestOrigin>
+               <v41:userRole>MDMSUPER</v41:userRole>
+               <v41:ControlExtensionProperty name="Interface">Online</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="SourceSystem">MDM</v41:ControlExtensionProperty>
+               <v41:ControlExtensionProperty name="ChannelId">365</v41:ControlExtensionProperty>
+               <v41:pageStartIndex>0</v41:pageStartIndex>
+               <v41:pageEndIndex>100</v41:pageEndIndex>
+               <v41:returnAvailableResultCount>20</v41:returnAvailableResultCount>
+            </v41:DWLControl>
+         </v41:RequestControl>
+         <v41:PersonDetailBObj>
+            <v41:TCRMPersonBObj>
+               <v41:ObjectReferenceId>1</v41:ObjectReferenceId>
+              <v41:ClientImportanceType>1001</v41:ClientImportanceType>--&gt;
+               <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+               <!--<v41:BirthDate>1980-01-01T00:00:00.001</v41:BirthDate>
+               </v41:TCRMExtension>-->
+               <v41:TCRMPartyAddressBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                  <v41:AddressUsageType>1029</v41:AddressUsageType>
+                  <v41:CareOf>CAREOSDSADF_1029</v41:CareOf>
+                  <v41:StartDate>2016-05-18T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2032-05-09T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                  <v41:TCRMExtension>
+                     <v41:ExtendedObject>XPARTYADDRESSBObjExt</v41:ExtendedObject>
+                     <v41:XPARTYADDRESSBObjExt>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                     </v41:XPARTYADDRESSBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMAddressBObj>
+                     <v41:AddressLineOne>BOXasaA</v41:AddressLineOne>
+                     <v41:AddressLineTwo>BAGROAD</v41:AddressLineTwo>
+                     <v41:AddressLineThree>Kochi</v41:AddressLineThree>
+                     <v41:City>PRETORIA</v41:City>
+                     <v41:ZipPostalCode>00002</v41:ZipPostalCode>
+                     <v41:CountryType>1250</v41:CountryType>
+                     <v41:TCRMExtension>
+                        <v41:XADDRESSBObjExt>
+                           <v41:XSuburb>SALVOKOP</v41:XSuburb>
+                        </v41:XADDRESSBObjExt>
+                     </v41:TCRMExtension>
+                  </v41:TCRMAddressBObj>
+               </v41:TCRMPartyAddressBObj>
+               <v41:TCRMPartyContactMethodBObj>
+                  <v41:ObjectReferenceId>0</v41:ObjectReferenceId>
+                 <v41:ContactMethodUsageType>1010</v41:ContactMethodUsageType>
+                  <v41:StartDate>2016-05-09T00:00:00.001</v41:StartDate>
+                  <v41:EndDate>2019-06-26T00:00:00.001</v41:EndDate>
+                  <v41:LastVerifiedDate>2016-12-02T14:50:42.0234</v41:LastVerifiedDate>
+                  <v41:SourceIdentifierType>1001</v41:SourceIdentifierType>
+                   <v41:TCRMExtension>
+                     <v41:XPARTYCONTACTMETHODBObjExt>
+                        <v41:XLastMaintainDate>2015-09-08T14:50:42.2938</v41:XLastMaintainDate>
+                        <v41:XPermanentInd>Y</v41:XPermanentInd>
+                        <v41:XOccNumber>1</v41:XOccNumber>
+                     </v41:XPARTYCONTACTMETHODBObjExt>
+                  </v41:TCRMExtension>
+                  <v41:TCRMContactMethodBObj>
+                     <v41:ReferenceNumber>01155665555557</v41:ReferenceNumber>
+                     <v41:ContactMethodType>1003</v41:ContactMethodType>
+                  </v41:TCRMContactMethodBObj>
+               </v41:TCRMPartyContactMethodBObj>
+               <v41:TCRMPartyIdentificationBObj>
+                  <v41:IdentificationType>1041</v41:IdentificationType>
+                  <v41:IdentificationNumber>600000351703</v41:IdentificationNumber>
+               </v41:TCRMPartyIdentificationBObj>
+            </v41:TCRMPersonBObj>
+         </v41:PersonDetailBObj>
+      </v4:MaintainPersonDetailReq>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+09:50:04.630 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 194.41
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Language: en-US
+1 < Content-Length: 4
+1 < Content-Type: text/xml
+1 < Date: Wed, 17 Jul 2019 07:50:04 GMT
+1 < Server: nginx/1.15.5
+1 < Strict-Transport-Security: max-age=15724800; includeSubDomains
+1 < X-Powered-By: Servlet/3.1
+Deny
+
+09:50:04.630 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Deny
+09:50:04.652 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: pep.feature

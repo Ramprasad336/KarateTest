@@ -1,0 +1,39 @@
+<testsuite failures="0" name="pep.feature" skipped="0" tests="2" time="0.763212">
+  <testcase classname="pep" name="Pep Primary Contact Number with permit" time="0.546046">
+    <system-out>* url AzpPepSoapEndPoint .................................................. passed
+Given path 'pep/PartyService/v4' .......................................... passed
+And header Content-Type = 'text/xml' ...................................... passed
+And header X-payloadType = 'permit' ....................................... passed
+And header Authorization = 'bearer 1.2.3' ................................. passed
+And header X-obligation-id = '1.2.3' ...................................... passed
+And request ............................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Response/Result/Decision == 'Permit' .................. passed</system-out>
+  </testcase>
+  <testcase classname="pep" name="Pep Primary Contact Number with deny" time="0.217166">
+    <system-out>* url AzpPepSoapEndPoint .................................................. passed
+Given path 'pep/PartyService/v4' .......................................... passed
+And header Content-Type = 'text/xml' ...................................... passed
+And header X-payloadType = 'permit' ....................................... passed
+And header Authorization = 'bearer 1.2.3' ................................. passed
+And header X-obligation-id = '1.2.3' ...................................... passed
+And request ............................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Response/Result/Decision == 'Permit' .................. passed
+* url AzpPepSoapEndPoint .................................................. passed
+Given path 'pep/PartyService/v4' .......................................... passed
+And header Content-Type = 'text/xml' ...................................... passed
+And header X-payloadType = 'deny' ......................................... passed
+And header Authorization = 'bearer 1.2.3' ................................. passed
+And header X-obligation-id = '1.2.3' ...................................... passed
+And request ............................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Response/Result/Decision == 'Deny' .................... passed</system-out>
+  </testcase>
+</testsuite>
